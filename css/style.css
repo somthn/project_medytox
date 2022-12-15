@@ -1,0 +1,195 @@
+/* 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body
+{
+    /* font-size: calc(0.35em + 0.7vw); */
+    font-family: 'Hahmlet', serif;
+    height: 100vh;
+    color: #000000;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+a
+{
+    display: block;
+    text-decoration: none;
+}
+
+img, button 
+{
+    vertical-align: middle;
+    border: none;
+}
+
+.container
+{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+/* header */
+#header
+{
+    width: 100%;
+    background: linear-gradient(rgb(255,255,255) 79px, rgba(255,255,255,0.5) 451px,
+    rgba(255,255,255,0.5));
+    position: fixed;
+    overflow: hidden;
+    height: 79px;
+    transition: all 0.5s;
+}
+
+.header-wrap
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.logo
+{
+    width: 10%;
+    padding: 25px 0 0 10px;
+}
+
+.allmenu
+{
+    display: none;
+}
+
+.navi
+{
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#menu
+{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+#menu > li 
+{
+    position: relative;
+    width: 140px;
+}
+
+#menu a
+{
+    color: #000000;
+}
+
+#menu > li > a
+{
+    padding: 10px 30px;
+    text-align: center;
+}
+
+#menu > li:hover
+{
+    font-weight: 600;
+}
+/* 마우스오버 선긋기 애니메이션*/
+#menu > li::before
+{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all linear 0.5s;
+}
+
+#menu > li:hover::before
+{
+    width: 140px;
+    background-color: #d60202;
+}
+
+#submenu
+{
+    /* display: none; */
+    position: absolute;
+    text-align: center;
+    padding-top: 30px;
+    width: 140px;
+}
+
+#submenu > li > a
+{
+    padding: 20px 30px;
+    text-align: center;
+    font-weight: 400;
+}
+
+#submenu > li > a:hover
+{
+    font-weight: 600;
+    color: #b82b2b;
+}
+
+.lang
+{
+    
+    padding: 20px;
+}
+
+select#language 
+{
+    padding: 10px;
+}
+
+@media (max-width: 1150px) 
+{
+    .logo
+    {
+        margin: 0 auto;
+    }
+
+    .allmenu img
+    {
+        width: 35px;
+    }
+
+    .navi
+    {
+        display: none;
+    }
+
+    .allmenu
+    {
+        display: block;
+        padding: 20px;
+        color: #ffffff;
+    }
+
+    .lang
+    {
+        display: none;
+    }
+}
+
+/* section1 */
+#section1
+{
+    padding-top: 79px;
+}
