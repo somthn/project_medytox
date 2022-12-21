@@ -1,100 +1,307 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메디톡스 홈페이지</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/2e5f69190c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/common.css" />
     <script
       src="https://kit.fontawesome.com/2e5f69190c.js"
       crossorigin="anonymous"
     ></script>
-     <!-- jQuery CDN-->
-     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-</head>
-<body>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
     <div class="container">
-        <header id="header">
-            <div class="header-wrap">
-                <div class="logo">
-                    <a href="#"><img src="./images/logo.png" alt="로고"></a>
+      <header id="header">
+        <div class="header-wrap">
+          <div class="logo">
+            <a href="#"><img src="./images/logo.png" alt="로고" /></a>
+          </div>
+          <div class="allmenu">
+            <img src="./images/—Pngtree—menu vector icon_4017397.png" alt="" />
+          </div>
+          <div class="navi">
+            <ul id="menu">
+              <li>
+                <a href="#">기업소개</a>
+                <ul id="submenu">
+                  <li><a href="#">기업개요</a></li>
+                  <li><a href="#">기업연혁</a></li>
+                  <li>
+                    <a href="#">비전 및 <br />핵심가치</a>
+                  </li>
+                  <li><a href="#">사업장소개</a></li>
+                  <li><a href="#">CI</a></li>
+                  <li><a href="#">문의</a></li>
+                  <li><a href="#">윤리경영</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">제품</a>
+                <ul id="submenu">
+                  <li>
+                    <a href="#">보툴리눔<br />톡신제제</a>
+                  </li>
+                  <li><a href="#">히알루론산필러</a></li>
+                  <li><a href="#">의료기기</a></li>
+                  <li><a href="#">전문의약품</a></li>
+                  <li><a href="#">주사제</a></li>
+                  <li><a href="#">건강식품</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">연구개발</a>
+                <ul id="submenu">
+                  <li><a href="#">R&D비전 및 성과</a></li>
+                  <li><a href="#">파이프라인</a></li>
+                  <li><a href="#">R&D설비</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">투자정보</a>
+                <ul id="submenu">
+                  <li><a href="#">IR공지사항</a></li>
+                  <li><a href="#">공시정보</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">뉴스룸</a>
+                <ul id="submenu">
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">홍보영상</a></li>
+                </ul>
+              </li>
+              <li><a href="#">채용</a></li>
+            </ul>
+          </div>
+          <div class="lang">
+            <select name="language" id="language">
+              <option value="kor">KOR</option>
+              <option value="eng">ENG</option>
+              <option value="jpn">JPN</option>
+              <option value="chn">CHN</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      <section id="section1">
+        <div class="swiper-container" id="my-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="text_wrap_top">
+                <div class="text_wrap">
+                  <p>메디톡스의 모든 것은 R&D에서 시작합니다.</p>
                 </div>
-                <div class="allmenu"><img src="./images/—Pngtree—menu vector icon_4017397.png" alt=""></div>
-                <div class="navi">
-                    <ul id="menu">
-                        <li><a href="#">기업소개</a>
-                            <ul id="submenu">
-                                <li><a href="#">기업개요</a></li>
-                                <li><a href="#">기업연혁</a></li>
-                                <li><a href="#">비전 및 <br>핵심가치</a></li>
-                                <li><a href="#">사업장소개</a></li>
-                                <li><a href="#">CI</a></li>
-                                <li><a href="#">문의</a></li>
-                                <li><a href="#">윤리경영</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">제품</a>
-                            <ul id="submenu">
-                                <li><a href="#">보툴리눔<br>톡신제제</a></li>
-                                <li><a href="#">히알루론산필러</a></li>
-                                <li><a href="#">의료기기</a></li>
-                                <li><a href="#">전문의약품</a></li>
-                                <li><a href="#">주사제</a></li>
-                                <li><a href="#">건강식품</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">연구개발</a>
-                            <ul id="submenu">
-                                <li><a href="#">R&D비전 및 성과</a></li>
-                                <li><a href="#">파이프라인</a></li>
-                                <li><a href="#">R&D설비</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">투자정보</a>
-                            <ul id="submenu">
-                                <li><a href="#">IR공지사항</a></li>
-                                <li><a href="#">공시정보</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">뉴스룸</a>
-                            <ul id="submenu">
-                                <li><a href="#">뉴스</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">홍보영상</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">채용</a></li>
-                    </ul>
+              </div>
+              <span class="line"></span>
+              <div class="text_wrap_bottom">
+                <div class="text_wrap">
+                  <h1 class="slide_text">BIOTECHNOLOGY THAT CHANGES</h1>
                 </div>
-                <div class="lang">
-                    <select name="language" id="language">
-                        <option value="kor">KOR</option>
-                        <option value="eng">ENG</option>
-                        <option value="jpn">JPN</option>
-                        <option value="chn">CHN</option>
-                    </select>
-                </div>
+              </div>
+              <div class="btn"><button type="button">바로가기</button></div>
             </div>
-        </header>
-        <section id="section1">
-            <div class="main_slide">
-                <div class="slide_img">
-                    <a href="#">
-                        <img src="./images/section1/dna-g707e7c441_1920.jpg" alt="슬라이드1">
-                    </a>
-                    <div class="slide_text"></div>
+            <div class="swiper-slide">
+              <div class="text_wrap_top">
+                <div class="text_wrap">
+                  <p>메디톡스는 인간의 시간을 연구하는 기업입니다.</p>
                 </div>
-                <div class="slide_img"></div>
-                <div class="slide_img"></div>
-                <div class="slide_img"></div>
+              </div>
+              <span class="line"></span>
+              <div class="text_wrap_bottom">
+                <div class="text_wrap">
+                  <h1 class="slide_text">STUDYING THE TIME OF HUMANKIND</h1>
+                </div>
+              </div>
+              <div class="btn"><button type="button">바로가기</button></div>
             </div>
-        </section>
+            <div class="swiper-slide">
+              <div class="text_wrap_top">
+                <div class="text_wrap">
+                  <p>메디톡스는 보툴리눔 톡신분야의 글로벌 리더입니다.</p>
+                </div>
+              </div>
+              <span class="line"></span>
+              <div class="text_wrap_bottom">
+                <div class="text_wrap">
+                  <h1 class="slide_text">
+                    THE GLOBAL LEADER OF<br />
+                    BOTULINUM TOXIN INDUSTRY
+                  </h1>
+                </div>
+              </div>
+              <div class="btn"><button type="button">바로가기</button></div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+      <section id="section2">
+        <div class="section2_wrap">
+          <div class="section2_txt">
+            <h1 class="main_title">뉴스룸</h1>
+          </div>
+          <div class="tab-wrapper">
+            <ul class="tabmenu">
+              <li><a href="#tabs1" class="active">뉴스</a></li>
+              <li><a href="#tabs2">공지사항</a></li>
+            </ul>
+            <div id="tab_contents">
+              <div id="tabs1" class="active">
+                <div class="tab_img">
+                  <img
+                    src="./images/section2/img1.png"
+                    alt="section2 이미지1"
+                  />
+                </div>
+                <ul class="tab1_contents">
+                  <a href="#"></a>
+                  <li>
+                    <a href="#"
+                      >메디톡스, 주력 사업 매출 동반 상승…‘3분기 매출 533억원
+                      달성’</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡스, 2022년도 공채 4기 신입 및 경력사원 모집…오는
+                      23일까지 접수</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡스, 톡신 매출 급등 ‘호실적’…매출 및 영업이익 동반
+                      상승</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡스, 신설 바이오뷰티사업부 총괄에 김미성 이사
+                      영입</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡스, 공식 블로그 오픈…대외 커뮤니케이션 강화</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div id="tabs2">
+                <div class="tab_img">
+                  <img
+                    src="./images/section2/img1.png"
+                    alt="section2 이미지1"
+                  />
+                </div>
+                <ul class="tab1_contents">
+                  <a href="#"></a>
+                  <li>
+                    <a href="#">의약품 회수에 관한 공표</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡신주 50, 100, 150, 200단위 제품설명서 변경공지</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#">코어톡스주 제품설명서 등록공지</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >메디톡신주 50, 100, 150, 200단위 제품설명서 변경공지</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#">메디톡신주 150단위 제품설명서 변경공지</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section3">
+        <div class="parallax" data-plx-img="./images/section1/main_visual_img_000.jpg">
+          <div class="parallax_txt">
+            <div class="para_wrap">
+              <h2>ABOUT US</h2>
+              <p>THE GLOBAL LEADER OF BOTULINUM TOXIN INDUSTRY</p>
+              <p>메디톡스는 보툴리눔 톡신분야의 글로벌 리더입니다.</p>
+              <p>끊임없는 R&D로 더 나은 세상을 만들어가는 일,<br> 글로벌 바이오제약 기업 메디톡스가 먼저 시작합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section4">
+        <div class="section4_wrap">
+          <div class="main_title">R&D</div>
+          <div class="rd_contents">
+            <div class="rd-content">
+              <a href="#">
+                <img src="./images/section4/RD_1.jpg" alt="r&d_1">
+                <div class="rd-cont-txt">
+                  <i class="fa-solid fa-flask"></i>
+                  <h3>R&D 비전 및 성과</h3>
+                  <p>메디톡스는 보툴리눔 톡신 의약품을 주력 아이템으로 연구역량을 집중하고 있습니다.</p>
+                </div>
+              </a>
+            </div>
+            <div class="rd-content">
+              <a href="#">
+                <img src="./images/section4/RD_2.jpg" alt="r&d_1">
+                <div class="rd-cont-txt">
+                  <i class="fa-solid fa-timeline"></i>
+                  <h3>파이프라인</h3>
+                  <p>R&D로부터 출발해 신약 개발과정과 상업화 과정이 이뤄지며 지속적인 성장을 실현합니다.</p>
+                </div>
+              </a>
+            </div>
+            <div class="rd-content">
+              <a href="#">
+                <img src="./images/section4/RD_3.jpg" alt="r&d_1">
+                <div class="rd-cont-txt">
+                  <i class="fa-solid fa-house-medical"></i>
+                  <h3>R&D 설비</h3>
+                  <p>메디톡스 광교 R&D센터는 신약개발을 위한 초기물질 발굴에서 임상진입을 위한 동물실험까지 신약개발의 모든 프로세스가
+                    하나의 사이트에서 구현될 수 있는 연구소입니다.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section5">
+        <div class="section5_wrap">
+          <div class="main_title">PRODUCTS</div>
+        </div>
+      </section>
     </div>
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
