@@ -1,5 +1,6 @@
 /* header  */
 
+// 1150px 이상일 때
 function headerToggle() {
   let header = document.querySelector('#header');
   let menu = document.querySelector('#menu');
@@ -7,6 +8,7 @@ function headerToggle() {
   let submenu = document.querySelectorAll('#submenu');
   let headerHeight = header.offsetHeight;
   let submenuHeight = 0;
+  let headerHI = 79;
 
   for (let i = 0; i < submenu.length; i++) {
     if (submenu[i].offsetHeight > submenuHeight) {
@@ -19,24 +21,44 @@ function headerToggle() {
       header.style.height = headerHeight + submenuHeight + 'px';
     });
     mainmenuList[i].addEventListener('mouseout', function () {
-      header.style.height = headerHeight + 'px';
+      header.style.height = headerHI + 'px';
     });
   }
 
 }
 
-function headerRes() {
-  let headerMenu = document.querySelector(".allmenu");
-  headerMenu.addEventListener("click",function(){
-    
-  })
+// 1150px 이하일 때 전체메뉴, 서브메뉴 함수
+$.Accordion = function () {
 
-  let acc = document.querySelectorAll("#submenu");
-  
+  const allmenu = $(".allmenu");
+
+  allmenu.on("click", function () {
+
+    const headerAco = $("#header");
+    let headerAcoHeight = $("#header").outerHeight();
+    console.log(headerAco);
+    console.log(headerAcoHeight);
+
+    if (headerAcoHeight <= 80) {
+      headerAco.css("height", "100%");
+    } else {
+      headerAco.css("height", 79);
+    }
+
+  });
+
+}
+
+function AccordionSub() {
+  let acc = document.getElementsByClassName("subMenu");
+  let accor = document.querySelectorAll("#menu>li>a")
+
   for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      //this.classList.toggle("active");
+    accor[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+
       let panel = this.nextElementSibling;
+
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
@@ -44,8 +66,40 @@ function headerRes() {
       }
     });
   }
-
 }
+
+
+if (window.innerWidth <= 1150) {
+  $.Accordion();
+  AccordionSub();
+  //$.AccordionSub();
+} else {
+  headerToggle();
+}
+
+
+/* 해상도 조절 시 이벤트 실행 (resize) */
+/*
+  resize가 화면 조절 시 실시간으로 계속 실행되는 것을 막기 위해
+  화면조절 후 실행될 수 있도록 시간차를 둔다.
+*/
+let delay = 300;
+let timer = null;
+
+$(window).on('resize', function () {
+  clearTimeout(timer);
+  timer = setTimeout(function () {
+    if (window.innerWidth <= 1150) {
+      $.Accordion();
+      //$.AccordionSub();
+      window.location.reload()
+    } else {
+      headerToggle();
+      window.location.reload()
+    }
+  }, delay);
+});
+
 
 /* section 1 슬라이드 */
 const slide = new Swiper('#my-swiper', {
@@ -129,39 +183,7 @@ function tabMenu() {
 }
 document.getElementById('tabs1').style.display = 'block';
 
-/* 해상도 조절 시 이벤트 실행 (resize) */
-/*
-  resize가 화면 조절 시 실시간으로 계속 실행되는 것을 막기 위해
-  화면조절 후 실행될 수 있도록 시간차를 둔다.
-*/
-let delay = 300;
-let timer = null;
-//let tabImg = document.querySelector('.tab_img>img');
-// if(window.innerWidth > 1150){
-//   tabImg.setAttribute('src', '../images/section2/covid-19-g18b8b2e38_1280.jpg')
-// }
-
-window.addEventListener('resize', function () {
-  this.clearTimeout(timer);
-  timer = setTimeout(function () {
-    // console.log('resize event!');
-    if (window.innerWidth <= 640 || window.innerWidth <= 1150 || window.innerWidth >= 1150) {
-      tabMenu();
-    }
-    if(window.innerWidth > 1150){
-      headerToggle();
-    }
-  }, delay);
-});
-
-//화면넓이 1150px 이상일 때 실행
-if(window.innerWidth > 1150){
-  headerToggle();
-}
-//화면넓이 640px 이하일 때 탭메뉴 실행
-if (window.innerWidth <= 640 || window.innerWidth <= 1150 || window.innerWidth >= 1150) {
-  tabMenu();
-}
+tabMenu();
 
 /* section3 이미지 */
 /*
@@ -217,14 +239,14 @@ window.addEventListener('scroll', plxScroll);
 const showingClass = 'showing';
 const firstSlide = document.querySelector(".product_cont:first-child");
 
-function productSlide(){
+function productSlide() {
 
   const currentSlide = document.querySelector(`.${showingClass}`);
-  
-  if(currentSlide){
+
+  if (currentSlide) {
     currentSlide.classList.remove(showingClass);
     const nextSlide = currentSlide.nextElementSibling;
-    if(nextSlide){
+    if (nextSlide) {
       nextSlide.classList.add(showingClass);
     } else {
       firstSlide.classList.add(showingClass);
@@ -233,4 +255,4 @@ function productSlide(){
     firstSlide.classList.add(showingClass);
   }
 }
-setInterval(productSlide,4000);
+setInterval(productSlide, 4000);

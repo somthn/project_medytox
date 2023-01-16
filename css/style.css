@@ -81,6 +81,11 @@ img, button
     z-index: 1000; */
 }
 
+.mobile_lang
+{
+    display: none;
+}
+
 #menu
 {
     display: flex;
@@ -116,7 +121,7 @@ img, button
 {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 100%;
     left: 0px;
     display: block;
     width: 2px;
@@ -165,11 +170,27 @@ select#language
     padding: 10px;
 }
 
-@media (max-width: 1150px) 
+@media (max-width: 1150px)
 {
+    #header
+    {
+        height: 79px;
+        /* width: 100%; */
+    }
+
+    .header-wrap
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
     .logo
     {
-        margin: 0 auto;
+        height: 100%;
     }
 
     .allmenu img
@@ -181,9 +202,109 @@ select#language
     .navi
     {
         /* display: none; */
-        position: relative;
-        top: 0;
-        right: 0;
+        position: absolute;
+        top: 79px;
+        right: -45px;
+        height: 100%;
+        width: 50vw;
+        background-color: #ffffff;
+        overflow-y: auto;
+        padding: 0;
+    }
+
+    .mobile_lang
+    {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        justify-content: center;
+        background-color: #ffcbcb;
+    }
+
+    .mobile_lang a
+    {
+        padding-right: 10px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #888888;
+    }
+
+    .mobile_lang a.active
+    {
+        color: #d60202;
+    }
+
+    #menu
+    {
+        display: block;
+    }
+
+    
+    #menu > li 
+    {
+        /* position: relative;
+        z-index: 1000; */
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    #menu > li:first-child
+    {
+        border-top: 1px solid #dddddd;
+    }
+
+    #menu > li::before
+    {
+        content: none;
+    }
+
+    #menu > li > a
+    {
+        /* padding: 10px 30px; */
+        text-align: center;
+        /* height: 50px; */
+        line-height: 50px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        color: #1f1f1f;
+    }
+
+    #menu > li > a.active
+    {
+        background-color: #e7302a;
+        color: #ffffff;
+        transition: all .3s;
+    }
+    
+    #submenu
+    {
+        display: none;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: static;
+        margin: 0 auto;
+        background-color: #f4f4f4;
+        
+    }
+
+    #submenu > li > a
+    {
+        /* padding: 20px 30px; */
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 1.2rem;
+        /* transition: all 0.3s; */
+    }
+
+    #submenu > li > a:hover
+    {
+        
     }
 
     .allmenu
@@ -191,80 +312,15 @@ select#language
         display: block;
         padding: 20px;
         color: #ffffff;
+        /* height: 100%; */
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
-    .lang
+    .lang select
     {
         display: none;
-    }
-
-    #menu
-    {
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-        z-index: 2000;
-    }
-
-    #menu > li 
-    {
-        position: relative;
-        z-index: 1000;
-        width: 140px;
-    }
-
-    #submenu
-{
-    /* display: none; */
-    position: absolute;
-    text-align: center;
-    padding-top: 30px;
-    width: 140px;
-    z-index: 1000 !important;
-}
-}
-
-@media (max-width: 640px) 
-{
-    .header-wrap
-    {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .logo
-    {
-        margin: 0;
-    }
-
-    .allmenu
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
-    }
-
-    .allmenu img
-    {
-        width: 25px;
-        vertical-align: middle;
-    }
-    #menu
-    {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-    }
-
-    #menu > li 
-    {
-        position: relative;
-        z-index: 1000;
-        width: 140px;
     }
 }
 
