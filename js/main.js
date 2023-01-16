@@ -99,7 +99,7 @@ $(window).on('resize', function () {
     if (window.innerWidth <= 1150) {
       $.Accordion();
       //$.AccordionSub();
-      window.location.reload()
+      //window.location.reload()
     } else {
       headerToggle();
       window.location.reload()
