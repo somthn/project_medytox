@@ -41,8 +41,15 @@ $.Accordion = function () {
 
     if (headerAcoHeight <= 80) {
       headerAco.css("height", "100%");
+      $('html, body').css({'height': '100%'});
+      $('#element').on('scroll touchmove mousewheel', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      });
     } else {
       headerAco.css("height", 79);
+      $('#element').off('scroll touchmove mousewheel');
     }
 
   });

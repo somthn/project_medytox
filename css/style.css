@@ -324,6 +324,14 @@ select#language
     }
 }
 
+@media (max-width: 1150px)
+{
+    .navi
+    {
+        width: 110vw;
+    }
+}
+
 /* section1 */
 #section1
 {
