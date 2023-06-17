@@ -388,8 +388,14 @@ button:hover
 
 .text_wrap_top
 {
-    margin-top: 500px;
+    margin-top: 435px;
 }
+
+.swiper-slide:last-child .text_wrap_top
+{
+    margin-top: 385px;
+}
+
 
 .text_wrap > p
 {
@@ -569,6 +575,7 @@ button:hover
     width: 100%;
     height: 100%;
     max-height: 860px;
+    min-height: 500px;
 }
 
 .section2_wrap
@@ -625,14 +632,51 @@ button:hover
 
 .tab_img 
 {
-    width: 100%;
+    width: 50%;
+    position: relative;
+    background-color: #931b1b;
 }
 
-.tab_img img
+/* .tab_img img
 {
     width: 100%;
-    height: 400px;
+    height: 100%;
+} */
+
+
+.img-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙정렬 */
+    width: 90%;
+    height: 84%;
+    background-color: inherit;
+    border: 1px solid #fff;
 }
+
+.img-txt img {
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙정렬 */
+    position: absolute;
+    width: 15%;
+}
+
+.img-txt p {
+    color: #ffffff;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙정렬 */
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-top: 1px solid;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+}
+
 
 .tab1_contents
 {
@@ -640,6 +684,10 @@ button:hover
     width: 100%;
     height: 100%;
     /* background-color: rgb(136, 153, 185); */
+}
+
+.texts {
+    width: 50%;
 }
 
 .tabmenu
@@ -683,7 +731,7 @@ button:hover
 
 .tab1_contents > li
 {
-    width: 90%;
+    width: 95%;
     border-bottom: #e4e4e4 1px solid;
     margin: 0 auto;
     
@@ -698,9 +746,9 @@ button:hover
 {
     display: flex;
     color: #1f1f1f;
-    line-height: 40px;
+    line-height: 25px;
     font-size: 0.9rem;
-    padding: 0 50px;
+    padding: 0.77rem 50px;
     width: 100%;
     justify-content: center;
 }
@@ -716,14 +764,14 @@ button:hover
 {
     .tab_img 
     {
-        width: 100%;
-        height: 50%;
+        width: 50%;
+        /* height: 50%; */
     }
 
     .tab_img img
     {
         width: 100%;
-        height: 50%;
+        height: 100%;
     }
 
     .tab-wrapper
@@ -798,7 +846,7 @@ button:hover
 
     .tab1_contents > li
     {
-        width: 90%;
+        width: 100%;
         border-bottom: #e4e4e4 1px solid;
         display: inline-block; /*가운데정렬*/
         text-align: center;
@@ -812,7 +860,7 @@ button:hover
     .tab1_contents > li > a {
         display: flex;
         color: #1f1f1f;
-        line-height: 40px;
+        line-height: 1.8;
         font-size: 0.9rem;
         padding: 0 50px;
         width: 100%;
@@ -909,7 +957,7 @@ button:hover
 
     .tab1_contents > li
     {
-        width: 90%;
+        width: 100%;
         border-bottom: #e4e4e4 1px solid;
         display: inline-block; /*가운데정렬*/
         text-align: center;
@@ -924,7 +972,7 @@ button:hover
     {
         display: block;
         color: #1f1f1f;
-        line-height: 25px;
+        /* line-height: 25px; */
         font-size: 0.9rem;
         padding: 0;
     }
@@ -935,7 +983,7 @@ button:hover
 
 #section3
 {
-    padding-top: 150px;
+    /* padding-top: 150px; */
     width: 100%;
     height: 100%;
 }
@@ -1223,13 +1271,14 @@ button:hover
 
 .products_slide
 {
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     max-height: 500px;
     height: 80%;
+    margin: 0 auto;
 }
 
 .product_cont
@@ -1239,7 +1288,7 @@ button:hover
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
@@ -1247,31 +1296,88 @@ button:hover
 
 .showing
 {
-    position: relative;
     z-index: 1;
     opacity: 1;
 }
 
+.product-wrap
+{
+    display: flex;
+}
+
 .product_cont a
 {
-    width: 80%;
-    margin: 0 auto;
+    width: 50%;
+    /* margin: 0 auto; */
+    max-width: 450px;
 }
 
 .product_cont img
 {
-    width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     display: flex;
 }
 
+/* 실험 */
+.flag {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+  }
+  /* .flag:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 225px solid white;
+    border-top: 225px solid transparent;
+    border-bottom: 225px solid transparent;
+  } */
+
+  .flag:after {
+    content: "보툴리눔 톡신 제제 - 이노톡스";
+    position: absolute;
+    right: -1px;
+    top: 80px;
+    width: 330px;
+    height: 80px;
+    background-color: #fff;
+    border: none;
+    line-height: 80px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    /* border-left: 225px solid white;
+    border-top: 225px solid transparent;
+    border-bottom: 225px solid transparent; */
+  }
+
+  .product_cont:nth-child(2) .flag::after {
+    content: "메디톡신";
+  }
+  .product_cont:nth-child(3) .flag::after {
+    content: "히알루론산 필러 - 뉴라미스";
+  }
+  .product_cont:nth-child(4) .flag::after {
+    content: "히알루론산 필러 - 아띠에르";
+  }
+  .product_cont:nth-child(5) .flag::after {
+    content: "주사제 - 메디톡스메가비타디주";
+  }
+  .product_cont:nth-child(6) .flag::after {
+    content: "건강식품 - 칸의아침";
+  }
+
+  
+
 @media (min-width: 1150px)
 {
-    .product_cont a
-    {
-        max-width: 800px;
-    }
 
     .product_cont p
     {

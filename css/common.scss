@@ -57,3 +57,111 @@
     transform: translateY(0);
   }
 }
+
+/* 실험 */
+$color-white: #ffffff;
+$color-light: #f4f4f4;
+$color-blue-gray: #9194a1;
+$color-blue-dark: #252b46;
+$color-red-light: #fa5757;
+
+
+
+.title {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: inherit;
+  color: $color-blue-dark;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: inherit;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  color: $color-blue-gray;
+}
+
+.main {
+  .tab {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+
+    &-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-bottom: 1.3px solid darken($color-light, 10);
+      transition: all 0.3s ease;
+      border-top: 1px solid #dfdfdf;
+
+        span {
+          font-size: 1.3rem;
+        }
+
+      &-link {
+        position: relative;
+        overflow: hidden;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: inherit;
+        cursor: pointer;
+        width: calc(100% / 2);
+        height: auto;
+        padding: 1rem 0;
+        border-bottom: 2.5px solid transparent;
+        color: $color-blue-gray;
+        background: $color-white;
+        transition: all 0.3s ease;
+        left: 0;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          z-index: 2;
+        }
+
+        &.is-active {
+          bottom: 0px;
+          z-index: 0;
+          overflow: hidden;
+          border-bottom: 2.5px solid $color-red-light;
+          color: $color-blue-dark;
+          background: $color-white;
+          left: 0;
+        }
+      }
+    }
+
+    &-bar {
+      // padding: 2.5rem 0;
+      overflow: hidden;
+      background: $color-white;
+
+      &-content {
+        display: none;
+        width: 100%;
+        min-height: 10rem;
+        transition: all 0.3s ease;
+
+        &.is-active {
+          display: flex;
+        }
+      }
+    }
+  }
+}
